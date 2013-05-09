@@ -23,6 +23,8 @@
 		9C902B17173C5E0E00BB5271 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C902AF2173C5E0E00BB5271 /* Foundation.framework */; };
 		9C902B1F173C5E0E00BB5271 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B1D173C5E0E00BB5271 /* InfoPlist.strings */; };
 		9C902B22173C5E0E00BB5271 /* MemoryGameAdvancedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B21173C5E0E00BB5271 /* MemoryGameAdvancedTests.m */; };
+		9C902B2D173C5E8800BB5271 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B2C173C5E8800BB5271 /* CardView.m */; };
+		9C902B2F173C5F7C00BB5271 /* wood-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B2E173C5F7C00BB5271 /* wood-background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		9C902B1E173C5E0E00BB5271 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C902B20173C5E0E00BB5271 /* MemoryGameAdvancedTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoryGameAdvancedTests.h; sourceTree = "<group>"; };
 		9C902B21173C5E0E00BB5271 /* MemoryGameAdvancedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryGameAdvancedTests.m; sourceTree = "<group>"; };
+		9C902B2B173C5E8800BB5271 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		9C902B2C173C5E8800BB5271 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		9C902B2E173C5F7C00BB5271 /* wood-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wood-background.png"; path = "../../../../../Desktop/wood-background.png"; sourceTree = "<group>"; };
+		9C902B31173C630D00BB5271 /* MatchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,10 @@
 				9C902B08173C5E0E00BB5271 /* ViewController.h */,
 				9C902B09173C5E0E00BB5271 /* ViewController.m */,
 				9C902B0B173C5E0E00BB5271 /* ViewController.xib */,
+				9C902B2B173C5E8800BB5271 /* CardView.h */,
+				9C902B2C173C5E8800BB5271 /* CardView.m */,
+				9C902B31173C630D00BB5271 /* MatchDelegate.h */,
+				9C902B30173C62D800BB5271 /* assets */,
 				9C902AF7173C5E0E00BB5271 /* Supporting Files */,
 			);
 			path = MemoryGameAdvanced;
@@ -158,6 +168,14 @@
 				9C902B1D173C5E0E00BB5271 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C902B30173C62D800BB5271 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				9C902B2E173C5F7C00BB5271 /* wood-background.png */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +254,7 @@
 				9C902B05173C5E0E00BB5271 /* Default@2x.png in Resources */,
 				9C902B07173C5E0E00BB5271 /* Default-568h@2x.png in Resources */,
 				9C902B0D173C5E0E00BB5271 /* ViewController.xib in Resources */,
+				9C902B2F173C5F7C00BB5271 /* wood-background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +292,7 @@
 				9C902AFD173C5E0E00BB5271 /* main.m in Sources */,
 				9C902B01173C5E0E00BB5271 /* AppDelegate.m in Sources */,
 				9C902B0A173C5E0E00BB5271 /* ViewController.m in Sources */,
+				9C902B2D173C5E8800BB5271 /* CardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

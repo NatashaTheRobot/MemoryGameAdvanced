@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CardView.h
 //  MemoryGameAdvanced
 //
 //  Created by Natasha Murashev on 5/9/13.
@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "MatchDelegate.h"
 
-@interface ViewController : UIViewController <MatchDelegate>
+@interface CardView : UIView
+
+@property (strong, nonatomic) id<MatchDelegate> delegate;
 
 @end
