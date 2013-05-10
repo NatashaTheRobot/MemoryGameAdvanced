@@ -15,8 +15,18 @@
 
 @property NSMutableArray *openCards;
 @property NSInteger numberOfCardViewsDisplayed;
+@property (nonatomic) int numberOfCardsTouched;
+
+@property (nonatomic) float timeInMilliseconds;
+@property (strong, nonatomic) NSTimer *timer;
+
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
 - (IBAction)resetGameWithButton:(id)sender;
+
+- (void)runTimer:(NSTimer *)timer;
+- (void)startTimer;
+
 
 @end
 
@@ -28,6 +38,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.numberOfCardViewsDisplayed = 0;
+    self.numberOfCardsTouched = 0;
     
     for (UIView *__view in self.view.subviews) {
         if ([__view isKindOfClass:[CardView class]]) {
@@ -37,6 +48,7 @@
     }
     
     self.openCards = [NSMutableArray array];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,8 +57,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)startTimer
+{
+    self.timeInMilliseconds = 0.00f;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01f target:self selector:@selector(runTimer:) userInfo:nil repeats:YES];
+    
+    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+    [runLoop addTimer:self.timer forMode:NSDefaultRunLoopMode];
+}
+
+- (void)runTimer:(NSTimer *)timer
+{
+    self.timeInMilliseconds += 0.01f;
+    self.timeLabel.text = [NSString stringWithFormat:@"%.2f", self.timeInMilliseconds];
+}
+
 - (void)didChooseCard:(CardView *)cardView
 {
+    self.numberOfCardsTouched++;
+    
+    if (self.numberOfCardsTouched == 1) {
+        [self startTimer];
+    }
     
     if (self.openCards.count < 2) {
         [cardView showCard];
@@ -60,9 +92,10 @@
                 }
                 
                 if (self.numberOfCardViewsDisplayed == 0) {
-                    
+                    [self.timer invalidate];
                     GameStatsViewController *gameStatsViewController = [[GameStatsViewController alloc] initWithNibName:@"GameStatsViewController" bundle:nil];
                     // TODO :pass the timer time and # of misses here
+                    gameStatsViewController.timeInMilliseconds = self.timeInMilliseconds;
                     [self.navigationController pushViewController:gameStatsViewController animated:YES];
                 }
             }

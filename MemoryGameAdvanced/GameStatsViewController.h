@@ -10,4 +10,7 @@
 
 @interface GameStatsViewController : UIViewController
 
+@property (nonatomic) float timeInMilliseconds;
+@property (nonatomic) int totalMissed;
+
 @end
