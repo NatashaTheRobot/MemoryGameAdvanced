@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "CardView.h"
+#import "GameStatsViewController.h"
 
 
 @interface GameViewController ()
@@ -57,7 +58,10 @@
                 }
                 
                 if (self.numberOfCardViewsDisplayed == 0) {
-                    [self.view removeFromSuperview];
+                    
+                    GameStatsViewController *gameStatsViewController = [[GameStatsViewController alloc] initWithNibName:@"GameStatsViewController" bundle:nil];
+                    // TODO :pass the timer time and # of misses here
+                    [self.navigationController pushViewController:gameStatsViewController animated:YES];
                 }
             }
         }

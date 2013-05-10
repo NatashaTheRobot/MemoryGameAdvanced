@@ -7,6 +7,7 @@
 //
 
 #import "GameStatsViewController.h"
+#import "GameViewController.h"
 
 @interface GameStatsViewController ()
 
@@ -42,6 +43,7 @@
 
 - (IBAction)playAgainWithButton:(id)sender
 {
-    
+    GameViewController *gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+    [self.navigationController pushViewController:gameViewController animated:YES];
 }
 @end

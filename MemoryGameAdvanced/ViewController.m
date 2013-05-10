@@ -41,6 +41,6 @@
 - (IBAction)startGameWithButton:(id)sender
 {
     GameViewController *gameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
-    [self.view addSubview:gameViewController.view];
+    [self.navigationController pushViewController:gameViewController animated:YES];
 }
 @end
