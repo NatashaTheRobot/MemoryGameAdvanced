@@ -28,6 +28,8 @@
 		9C902B36173D2DC500BB5271 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B34173D2DC500BB5271 /* ViewController.xib */; };
 		9C902B40173D307E00BB5271 /* wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B3F173D307E00BB5271 /* wood.jpg */; };
 		9C902B46173D33C300BB5271 /* green-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B45173D33C300BB5271 /* green-button.png */; };
+		9C902B4A173D490C00BB5271 /* GameStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B48173D490C00BB5271 /* GameStatsViewController.m */; };
+		9C902B4B173D490C00BB5271 /* GameStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B49173D490C00BB5271 /* GameStatsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,9 @@
 		9C902B34173D2DC500BB5271 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		9C902B3F173D307E00BB5271 /* wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wood.jpg; path = ../../../../../Desktop/wood.jpg; sourceTree = "<group>"; };
 		9C902B45173D33C300BB5271 /* green-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-button.png"; path = "../../../../../Desktop/green-button.png"; sourceTree = "<group>"; };
+		9C902B47173D490C00BB5271 /* GameStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStatsViewController.h; sourceTree = "<group>"; };
+		9C902B48173D490C00BB5271 /* GameStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStatsViewController.m; sourceTree = "<group>"; };
+		9C902B49173D490C00BB5271 /* GameStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameStatsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +143,9 @@
 				9C902B08173C5E0E00BB5271 /* GameViewController.h */,
 				9C902B09173C5E0E00BB5271 /* GameViewController.m */,
 				9C902B0B173C5E0E00BB5271 /* GameViewController.xib */,
+				9C902B47173D490C00BB5271 /* GameStatsViewController.h */,
+				9C902B48173D490C00BB5271 /* GameStatsViewController.m */,
+				9C902B49173D490C00BB5271 /* GameStatsViewController.xib */,
 				9C902B2B173C5E8800BB5271 /* CardView.h */,
 				9C902B2C173C5E8800BB5271 /* CardView.m */,
 				9C902B31173C630D00BB5271 /* MatchDelegate.h */,
@@ -268,6 +276,7 @@
 				9C902B36173D2DC500BB5271 /* ViewController.xib in Resources */,
 				9C902B40173D307E00BB5271 /* wood.jpg in Resources */,
 				9C902B46173D33C300BB5271 /* green-button.png in Resources */,
+				9C902B4B173D490C00BB5271 /* GameStatsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +316,7 @@
 				9C902B0A173C5E0E00BB5271 /* GameViewController.m in Sources */,
 				9C902B2D173C5E8800BB5271 /* CardView.m in Sources */,
 				9C902B35173D2DC500BB5271 /* ViewController.m in Sources */,
+				9C902B4A173D490C00BB5271 /* GameStatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
