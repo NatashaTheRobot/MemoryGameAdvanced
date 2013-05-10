@@ -12,6 +12,8 @@
 
 @interface ViewController ()
 
+@property NSMutableArray *openCards;
+
 @end
 
 @implementation ViewController
@@ -26,6 +28,8 @@
             ((CardView *)(__view)).delegate = self;
         }
     }
+    
+    self.openCards = [NSMutableArray array];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +40,27 @@
 
 - (void)didChooseCard:(CardView *)cardView
 {
-    NSLog(@"Chose card! %i", cardView.tag);
+    
+    if (self.openCards.count < 2) {
+        [cardView showCard];
+        [self.openCards addObject:cardView];
+    } else if (self.openCards.count == 2) {
+        NSLog(@"%i", ((CardView *)(self.openCards[0])).tag);
+        if (((CardView *)(self.openCards[0])).tag == ((CardView *)(self.openCards[0])).tag) {
+            NSLog(@"Match Found!!!!");
+            for (CardView *card in self.openCards) {
+                [card eliminateCard];
+            }
+        } else {
+            for (CardView *card in self.openCards) {
+                [card hideCard];
+            }
+        }
+        
+        [self.openCards removeAllObjects];
+        [self.openCards addObject:cardView];
+        [cardView showCard];
+    }
 }
 
 @end

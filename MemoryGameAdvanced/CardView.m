@@ -8,6 +8,13 @@
 
 #import "CardView.h"
 
+@interface CardView ()
+
+@property (strong, nonatomic) UILabel *label;
+@property (nonatomic) BOOL eliminated;
+
+@end
+
 @implementation CardView
 
 - (id)initWithFrame:(CGRect)frame
@@ -23,7 +30,12 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        // Initialization code
+        for (UIView *__view in self.subviews) {
+            if ([__view isKindOfClass:[UILabel class]]) {
+                self.label = ((UILabel *)(__view));
+                self.label.text = nil;
+            }
+        }
     }
     return self;
 }
@@ -39,7 +51,28 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self.delegate didChooseCard:self];
+    if (!self.eliminated) {
+        [self.delegate didChooseCard:self];
+    }
+}
+
+- (void)showCard
+{
+    self.backgroundColor = [UIColor whiteColor];
+    self.label.text = [NSString stringWithFormat:@"%i", self.tag];
+}
+
+- (void)hideCard
+{
+    self.backgroundColor = [UIColor orangeColor];
+    self.label.text = nil;
+}
+
+- (void)eliminateCard
+{
+    self.eliminated = TRUE;
+    self.backgroundColor = [UIColor brownColor];
+    self.label.text = nil;
 }
 
 @end

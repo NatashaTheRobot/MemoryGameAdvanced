@@ -13,4 +13,8 @@
 
 @property (strong, nonatomic) id<MatchDelegate> delegate;
 
+- (void)showCard;
+- (void)hideCard;
+- (void)eliminateCard;
+
 @end
