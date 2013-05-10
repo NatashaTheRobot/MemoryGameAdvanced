@@ -33,6 +33,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.timePlayedLabel.text = [NSString stringWithFormat:@"%.2f", self.timeInMilliseconds];
+    self.totalMissedLabel.text = [NSString stringWithFormat:@"%i", self.totalMissed];
 }
 
 - (void)didReceiveMemoryWarning

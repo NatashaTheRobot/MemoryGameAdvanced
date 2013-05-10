@@ -16,6 +16,7 @@
 @property NSMutableArray *openCards;
 @property NSInteger numberOfCardViewsDisplayed;
 @property (nonatomic) int numberOfCardsTouched;
+@property (nonatomic) int numberOfMissedMatches;
 
 @property (nonatomic) float timeInMilliseconds;
 @property (strong, nonatomic) NSTimer *timer;
@@ -39,6 +40,7 @@
     
     self.numberOfCardViewsDisplayed = 0;
     self.numberOfCardsTouched = 0;
+    self.numberOfMissedMatches = 0;
     
     for (UIView *__view in self.view.subviews) {
         if ([__view isKindOfClass:[CardView class]]) {
@@ -94,10 +96,14 @@
                 if (self.numberOfCardViewsDisplayed == 0) {
                     [self.timer invalidate];
                     GameStatsViewController *gameStatsViewController = [[GameStatsViewController alloc] initWithNibName:@"GameStatsViewController" bundle:nil];
-                    // TODO :pass the timer time and # of misses here
+                    
                     gameStatsViewController.timeInMilliseconds = self.timeInMilliseconds;
+                    gameStatsViewController.totalMissed = self.numberOfMissedMatches;
+                    
                     [self.navigationController pushViewController:gameStatsViewController animated:YES];
                 }
+            } else {
+                self.numberOfMissedMatches++;
             }
         }
     } else {
