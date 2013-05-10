@@ -52,7 +52,7 @@
 
 - (void)hideCard
 {
-    self.backgroundColor = [UIColor orangeColor];
+    self.backgroundColor = [UIColor purpleColor];
     self.label.text = nil;
 }
 

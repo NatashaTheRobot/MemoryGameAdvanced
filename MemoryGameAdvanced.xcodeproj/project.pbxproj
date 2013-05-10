@@ -16,15 +16,18 @@
 		9C902B03173C5E0E00BB5271 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B02173C5E0E00BB5271 /* Default.png */; };
 		9C902B05173C5E0E00BB5271 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B04173C5E0E00BB5271 /* Default@2x.png */; };
 		9C902B07173C5E0E00BB5271 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B06173C5E0E00BB5271 /* Default-568h@2x.png */; };
-		9C902B0A173C5E0E00BB5271 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B09173C5E0E00BB5271 /* ViewController.m */; };
-		9C902B0D173C5E0E00BB5271 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B0B173C5E0E00BB5271 /* ViewController.xib */; };
+		9C902B0A173C5E0E00BB5271 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B09173C5E0E00BB5271 /* GameViewController.m */; };
+		9C902B0D173C5E0E00BB5271 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B0B173C5E0E00BB5271 /* GameViewController.xib */; };
 		9C902B15173C5E0E00BB5271 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C902B14173C5E0E00BB5271 /* SenTestingKit.framework */; };
 		9C902B16173C5E0E00BB5271 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C902AF0173C5E0E00BB5271 /* UIKit.framework */; };
 		9C902B17173C5E0E00BB5271 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C902AF2173C5E0E00BB5271 /* Foundation.framework */; };
 		9C902B1F173C5E0E00BB5271 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B1D173C5E0E00BB5271 /* InfoPlist.strings */; };
 		9C902B22173C5E0E00BB5271 /* MemoryGameAdvancedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B21173C5E0E00BB5271 /* MemoryGameAdvancedTests.m */; };
 		9C902B2D173C5E8800BB5271 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B2C173C5E8800BB5271 /* CardView.m */; };
-		9C902B2F173C5F7C00BB5271 /* wood-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B2E173C5F7C00BB5271 /* wood-background.png */; };
+		9C902B35173D2DC500BB5271 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B33173D2DC400BB5271 /* ViewController.m */; };
+		9C902B36173D2DC500BB5271 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B34173D2DC500BB5271 /* ViewController.xib */; };
+		9C902B40173D307E00BB5271 /* wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B3F173D307E00BB5271 /* wood.jpg */; };
+		9C902B46173D33C300BB5271 /* green-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B45173D33C300BB5271 /* green-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +54,9 @@
 		9C902B02173C5E0E00BB5271 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9C902B04173C5E0E00BB5271 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9C902B06173C5E0E00BB5271 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9C902B08173C5E0E00BB5271 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9C902B09173C5E0E00BB5271 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9C902B0C173C5E0E00BB5271 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9C902B08173C5E0E00BB5271 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		9C902B09173C5E0E00BB5271 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		9C902B0C173C5E0E00BB5271 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameViewController.xib; sourceTree = "<group>"; };
 		9C902B13173C5E0E00BB5271 /* MemoryGameAdvancedTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameAdvancedTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C902B14173C5E0E00BB5271 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C902B1C173C5E0E00BB5271 /* MemoryGameAdvancedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoryGameAdvancedTests-Info.plist"; sourceTree = "<group>"; };
@@ -62,8 +65,12 @@
 		9C902B21173C5E0E00BB5271 /* MemoryGameAdvancedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoryGameAdvancedTests.m; sourceTree = "<group>"; };
 		9C902B2B173C5E8800BB5271 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		9C902B2C173C5E8800BB5271 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
-		9C902B2E173C5F7C00BB5271 /* wood-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wood-background.png"; path = "../../../../../Desktop/wood-background.png"; sourceTree = "<group>"; };
 		9C902B31173C630D00BB5271 /* MatchDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchDelegate.h; sourceTree = "<group>"; };
+		9C902B32173D2DC400BB5271 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9C902B33173D2DC400BB5271 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9C902B34173D2DC500BB5271 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		9C902B3F173D307E00BB5271 /* wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wood.jpg; path = ../../../../../Desktop/wood.jpg; sourceTree = "<group>"; };
+		9C902B45173D33C300BB5271 /* green-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "green-button.png"; path = "../../../../../Desktop/green-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +132,12 @@
 			children = (
 				9C902AFF173C5E0E00BB5271 /* AppDelegate.h */,
 				9C902B00173C5E0E00BB5271 /* AppDelegate.m */,
-				9C902B08173C5E0E00BB5271 /* ViewController.h */,
-				9C902B09173C5E0E00BB5271 /* ViewController.m */,
-				9C902B0B173C5E0E00BB5271 /* ViewController.xib */,
+				9C902B32173D2DC400BB5271 /* ViewController.h */,
+				9C902B33173D2DC400BB5271 /* ViewController.m */,
+				9C902B34173D2DC500BB5271 /* ViewController.xib */,
+				9C902B08173C5E0E00BB5271 /* GameViewController.h */,
+				9C902B09173C5E0E00BB5271 /* GameViewController.m */,
+				9C902B0B173C5E0E00BB5271 /* GameViewController.xib */,
 				9C902B2B173C5E8800BB5271 /* CardView.h */,
 				9C902B2C173C5E8800BB5271 /* CardView.m */,
 				9C902B31173C630D00BB5271 /* MatchDelegate.h */,
@@ -173,7 +183,8 @@
 		9C902B30173C62D800BB5271 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				9C902B2E173C5F7C00BB5271 /* wood-background.png */,
+				9C902B45173D33C300BB5271 /* green-button.png */,
+				9C902B3F173D307E00BB5271 /* wood.jpg */,
 			);
 			name = assets;
 			sourceTree = "<group>";
@@ -253,8 +264,10 @@
 				9C902B03173C5E0E00BB5271 /* Default.png in Resources */,
 				9C902B05173C5E0E00BB5271 /* Default@2x.png in Resources */,
 				9C902B07173C5E0E00BB5271 /* Default-568h@2x.png in Resources */,
-				9C902B0D173C5E0E00BB5271 /* ViewController.xib in Resources */,
-				9C902B2F173C5F7C00BB5271 /* wood-background.png in Resources */,
+				9C902B0D173C5E0E00BB5271 /* GameViewController.xib in Resources */,
+				9C902B36173D2DC500BB5271 /* ViewController.xib in Resources */,
+				9C902B40173D307E00BB5271 /* wood.jpg in Resources */,
+				9C902B46173D33C300BB5271 /* green-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +304,9 @@
 			files = (
 				9C902AFD173C5E0E00BB5271 /* main.m in Sources */,
 				9C902B01173C5E0E00BB5271 /* AppDelegate.m in Sources */,
-				9C902B0A173C5E0E00BB5271 /* ViewController.m in Sources */,
+				9C902B0A173C5E0E00BB5271 /* GameViewController.m in Sources */,
 				9C902B2D173C5E8800BB5271 /* CardView.m in Sources */,
+				9C902B35173D2DC500BB5271 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,12 +337,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		9C902B0B173C5E0E00BB5271 /* ViewController.xib */ = {
+		9C902B0B173C5E0E00BB5271 /* GameViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9C902B0C173C5E0E00BB5271 /* en */,
 			);
-			name = ViewController.xib;
+			name = GameViewController.xib;
 			sourceTree = "<group>";
 		};
 		9C902B1D173C5E0E00BB5271 /* InfoPlist.strings */ = {
