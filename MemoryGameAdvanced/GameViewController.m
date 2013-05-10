@@ -16,6 +16,8 @@
 @property NSMutableArray *openCards;
 @property NSInteger numberOfCardViewsDisplayed;
 
+- (IBAction)resetGameWithButton:(id)sender;
+
 @end
 
 @implementation GameViewController
@@ -76,4 +78,9 @@
     }
 }
 
+- (IBAction)resetGameWithButton:(id)sender
+{
+    GameViewController *newGameViewController = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
+    [self.navigationController pushViewController:newGameViewController animated:NO];
+}
 @end

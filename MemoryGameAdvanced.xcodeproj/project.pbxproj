@@ -30,6 +30,7 @@
 		9C902B46173D33C300BB5271 /* green-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B45173D33C300BB5271 /* green-button.png */; };
 		9C902B4A173D490C00BB5271 /* GameStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B48173D490C00BB5271 /* GameStatsViewController.m */; };
 		9C902B4B173D490C00BB5271 /* GameStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B49173D490C00BB5271 /* GameStatsViewController.xib */; };
+		9C902B4D173D4FE300BB5271 /* red-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B4C173D4FE300BB5271 /* red-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		9C902B47173D490C00BB5271 /* GameStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStatsViewController.h; sourceTree = "<group>"; };
 		9C902B48173D490C00BB5271 /* GameStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStatsViewController.m; sourceTree = "<group>"; };
 		9C902B49173D490C00BB5271 /* GameStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameStatsViewController.xib; sourceTree = "<group>"; };
+		9C902B4C173D4FE300BB5271 /* red-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "red-button.png"; path = "../../../../../Desktop/red-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		9C902B30173C62D800BB5271 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				9C902B4C173D4FE300BB5271 /* red-button.png */,
 				9C902B45173D33C300BB5271 /* green-button.png */,
 				9C902B3F173D307E00BB5271 /* wood.jpg */,
 			);
@@ -277,6 +280,7 @@
 				9C902B40173D307E00BB5271 /* wood.jpg in Resources */,
 				9C902B46173D33C300BB5271 /* green-button.png in Resources */,
 				9C902B4B173D490C00BB5271 /* GameStatsViewController.xib in Resources */,
+				9C902B4D173D4FE300BB5271 /* red-button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
