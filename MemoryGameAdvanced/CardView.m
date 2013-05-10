@@ -11,7 +11,6 @@
 @interface CardView ()
 
 @property (strong, nonatomic) UILabel *label;
-@property (nonatomic) BOOL eliminated;
 
 @end
 
@@ -40,20 +39,9 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (!self.eliminated) {
-        [self.delegate didChooseCard:self];
-    }
+    [self.delegate didChooseCard:self];
 }
 
 - (void)showCard
@@ -70,9 +58,7 @@
 
 - (void)eliminateCard
 {
-    self.eliminated = TRUE;
-    self.backgroundColor = [UIColor brownColor];
-    self.label.text = nil;
+    [self removeFromSuperview];
 }
 
 @end

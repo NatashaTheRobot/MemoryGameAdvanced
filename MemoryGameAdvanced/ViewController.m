@@ -42,21 +42,25 @@
 {
     
     if (self.openCards.count < 2) {
+        
         [cardView showCard];
         [self.openCards addObject:cardView];
-    } else if (self.openCards.count == 2) {
-        NSLog(@"%i", ((CardView *)(self.openCards[0])).tag);
-        if (((CardView *)(self.openCards[0])).tag == ((CardView *)(self.openCards[0])).tag) {
-            NSLog(@"Match Found!!!!");
-            for (CardView *card in self.openCards) {
-                [card eliminateCard];
-            }
-        } else {
-            for (CardView *card in self.openCards) {
-                [card hideCard];
+        
+        if (self.openCards.count == 2) {
+            
+            if (((CardView *)(self.openCards[0])).tag == ((CardView *)(self.openCards[1])).tag) {
+                NSLog(@"Match Found!!!!");
+                for (CardView *card in self.openCards) {
+                    [card eliminateCard];
+                }
             }
         }
+    } else {
         
+        for (CardView *card in self.openCards) {
+            [card hideCard];
+        }
+
         [self.openCards removeAllObjects];
         [self.openCards addObject:cardView];
         [cardView showCard];
