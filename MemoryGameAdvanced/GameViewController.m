@@ -41,16 +41,32 @@
     self.numberOfCardViewsDisplayed = 0;
     self.numberOfCardsTouched = 0;
     self.numberOfMissedMatches = 0;
+    self.openCards = [NSMutableArray array];
     
-    for (UIView *__view in self.view.subviews) {
-        if ([__view isKindOfClass:[CardView class]]) {
-            ((CardView *)(__view)).delegate = self;
-            self.numberOfCardViewsDisplayed ++;
+    [self displayCardsWithNumberOfColumns:4 numberOfRows:4];
+
+}
+
+- (void)displayCardsWithNumberOfColumns:(NSUInteger)columns numberOfRows:(NSUInteger)rows
+{
+
+    float x = 10.0;
+    float y = 55.0;
+    
+    for (int row = 0; row < rows; row++) {
+        
+        for (int column = 0; column < columns; column++) {
+            CGRect frame = CGRectMake(x, y, 65, 100);
+            
+            CardView *cardView = [[CardView alloc] initWithFrame:frame];
+            cardView.delegate = self;
+            [self.view addSubview:cardView];
+            x += 75.0;
         }
+        x = 10.0;
+        y += 120.0;
     }
     
-    self.openCards = [NSMutableArray array];
-
 }
 
 - (void)didReceiveMemoryWarning

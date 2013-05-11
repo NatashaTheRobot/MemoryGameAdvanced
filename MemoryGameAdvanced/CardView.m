@@ -20,21 +20,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        for (UIView *__view in self.subviews) {
-            if ([__view isKindOfClass:[UILabel class]]) {
-                self.label = ((UILabel *)(__view));
-                self.label.text = nil;
-            }
-        }
+        self.backgroundColor = [UIColor purpleColor];
     }
     return self;
 }
