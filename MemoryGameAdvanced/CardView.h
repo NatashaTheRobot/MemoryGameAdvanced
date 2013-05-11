@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) id<MatchDelegate> delegate;
 
+- (void)setLabelText:(NSString *)text;
+
 - (void)showCard;
 - (void)hideCard;
 - (void)eliminateCard;

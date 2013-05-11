@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UILabel *label;
 
+- (void)makeLabelView:(CGRect)frame;
+
 @end
 
 @implementation CardView
@@ -21,8 +23,22 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor purpleColor];
+        [self makeLabelView:frame];
     }
     return self;
+}
+
+- (void)makeLabelView:(CGRect)frame
+{
+    CGRect labelFrame = CGRectMake(0, 40, frame.size.width, 20);
+    UILabel *label = [[UILabel alloc] initWithFrame:labelFrame];
+    label.textAlignment = NSTextAlignmentCenter;
+    self.label =  label;
+}
+
+- (void)setLabelText:(NSString *)text
+{
+    self.label.text = text;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -33,13 +49,15 @@
 - (void)showCard
 {
     self.backgroundColor = [UIColor whiteColor];
-    self.label.text = [NSString stringWithFormat:@"%i", self.tag];
+//    self.label.text = [NSString stringWithFormat:@"%i", self.tag];
+    self.label.text = @"hello";
+    [self addSubview:self.label];
 }
 
 - (void)hideCard
 {
     self.backgroundColor = [UIColor purpleColor];
-    self.label.text = nil;
+    [self.label removeFromSuperview];
 }
 
 - (void)eliminateCard
