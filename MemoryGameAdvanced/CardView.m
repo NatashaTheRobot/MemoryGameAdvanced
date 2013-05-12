@@ -49,8 +49,7 @@
 - (void)showCard
 {
     self.backgroundColor = [UIColor whiteColor];
-//    self.label.text = [NSString stringWithFormat:@"%i", self.tag];
-    self.label.text = @"hello";
+    self.label.text = [NSString stringWithFormat:@"%i", self.tag];
     [self addSubview:self.label];
 }
 

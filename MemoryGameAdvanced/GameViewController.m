@@ -14,6 +14,9 @@
 @interface GameViewController ()
 
 @property NSMutableArray *openCards;
+@property NSMutableArray *cardDeck;
+@property NSMutableArray *cardLabels;
+
 @property NSInteger numberOfCardViewsDisplayed;
 @property (nonatomic) int numberOfCardsTouched;
 @property (nonatomic) int numberOfMissedMatches;
@@ -24,6 +27,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
 - (IBAction)resetGameWithButton:(id)sender;
+
+- (void)generateCardViewsWithNumberOfColumns:(NSUInteger)columns numberOfRows:(NSUInteger)rows;
+- (void)generateCardLabels:(NSUInteger)numberOfLabels;
+- (void)displayCardDeck;
+- (void)shuffleCardLabels;
 
 - (void)runTimer:(NSTimer *)timer;
 - (void)startTimer;
@@ -42,13 +50,28 @@
     self.numberOfCardsTouched = 0;
     self.numberOfMissedMatches = 0;
     self.openCards = [NSMutableArray array];
+    self.cardDeck = [NSMutableArray array];
     
-    [self displayCardsWithNumberOfColumns:4 numberOfRows:4];
+    [self generateCardViewsWithNumberOfColumns:4 numberOfRows:4];
+    [self displayCardDeck];
 
 }
 
-- (void)displayCardsWithNumberOfColumns:(NSUInteger)columns numberOfRows:(NSUInteger)rows
+- (void)generateCardLabels:(NSUInteger)numberOfLabels
 {
+    self.cardLabels = [NSMutableArray array];
+    
+    for (uint i = 0; i < (numberOfLabels / 2); i++) {
+        [self.cardLabels addObject:[NSNumber numberWithInt:i]];
+    }
+    
+    [self.cardLabels addObjectsFromArray:self.cardLabels];
+}
+
+- (void)generateCardViewsWithNumberOfColumns:(NSUInteger)columns numberOfRows:(NSUInteger)rows
+{
+    [self generateCardLabels:(columns * rows)];
+    [self shuffleCardLabels];
 
     float x = 10.0;
     float y = 55.0;
@@ -60,13 +83,34 @@
             
             CardView *cardView = [[CardView alloc] initWithFrame:frame];
             cardView.delegate = self;
-            [self.view addSubview:cardView];
+            cardView.tag = [(NSNumber *)(self.cardLabels[(self.cardLabels.count - 1)]) intValue];
+            [self.cardLabels removeLastObject];
+            [self.cardDeck addObject:cardView];
+            
             x += 75.0;
         }
+        
         x = 10.0;
         y += 120.0;
     }
     
+}
+
+- (void)shuffleCardLabels
+{
+    for (uint i = 0; i < self.cardLabels.count; i++) {
+        int newIndex = arc4random() % (self.cardLabels.count - 1);
+        [self.cardLabels exchangeObjectAtIndex:i withObjectAtIndex:newIndex];
+    }
+    
+}
+
+- (void)displayCardDeck
+{
+    for (CardView *cardView in self.cardDeck) {
+        [self.view addSubview:cardView];
+        self.numberOfCardViewsDisplayed++;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,6 +136,7 @@
 
 - (void)didChooseCard:(CardView *)cardView
 {
+    
     self.numberOfCardsTouched++;
     
     if (self.numberOfCardsTouched == 1) {
