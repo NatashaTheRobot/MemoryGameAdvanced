@@ -11,6 +11,7 @@
 @interface CardView ()
 
 @property (nonatomic) BOOL cardIsOpen;
+@property (nonatomic) CGRect cardFrame;
 @property (strong, nonatomic) UIImageView *imageView;
 
 @end
@@ -22,6 +23,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor purpleColor];
+        self.cardFrame = frame;
     }
     return self;
 }
@@ -30,6 +32,7 @@
 {
     UIImage *image = [UIImage imageNamed:imageName];
     self.imageView = [[UIImageView alloc] initWithImage:image];
+    self.imageView.center = CGPointMake(33, 50);
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
