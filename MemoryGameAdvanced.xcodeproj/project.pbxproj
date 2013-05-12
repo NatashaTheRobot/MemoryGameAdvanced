@@ -31,6 +31,14 @@
 		9C902B4A173D490C00BB5271 /* GameStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C902B48173D490C00BB5271 /* GameStatsViewController.m */; };
 		9C902B4B173D490C00BB5271 /* GameStatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B49173D490C00BB5271 /* GameStatsViewController.xib */; };
 		9C902B4D173D4FE300BB5271 /* red-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B4C173D4FE300BB5271 /* red-button.png */; };
+		9C902B4F173FD17900BB5271 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B4E173FD17900BB5271 /* circle.png */; };
+		9C902B51173FD92400BB5271 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B50173FD92400BB5271 /* star.png */; };
+		9C902B53173FD92C00BB5271 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B52173FD92C00BB5271 /* heart.png */; };
+		9C902B55173FD93400BB5271 /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B54173FD93400BB5271 /* diamond.png */; };
+		9C902B57173FD94400BB5271 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B56173FD94400BB5271 /* square.png */; };
+		9C902B59173FD94C00BB5271 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B58173FD94C00BB5271 /* triangle.png */; };
+		9C902B5B173FD96600BB5271 /* hexagon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B5A173FD96600BB5271 /* hexagon.png */; };
+		9C902B5D173FDC5B00BB5271 /* rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C902B5C173FDC5A00BB5271 /* rectangle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +86,14 @@
 		9C902B48173D490C00BB5271 /* GameStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStatsViewController.m; sourceTree = "<group>"; };
 		9C902B49173D490C00BB5271 /* GameStatsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameStatsViewController.xib; sourceTree = "<group>"; };
 		9C902B4C173D4FE300BB5271 /* red-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "red-button.png"; path = "../../../../../Desktop/red-button.png"; sourceTree = "<group>"; };
+		9C902B4E173FD17900BB5271 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circle.png; path = ../../../../../Desktop/circle.png; sourceTree = "<group>"; };
+		9C902B50173FD92400BB5271 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = ../../../../../Desktop/star.png; sourceTree = "<group>"; };
+		9C902B52173FD92C00BB5271 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = ../../../../../Desktop/heart.png; sourceTree = "<group>"; };
+		9C902B54173FD93400BB5271 /* diamond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diamond.png; path = ../../../../../Desktop/diamond.png; sourceTree = "<group>"; };
+		9C902B56173FD94400BB5271 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = square.png; path = ../../../../../Desktop/square.png; sourceTree = "<group>"; };
+		9C902B58173FD94C00BB5271 /* triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = triangle.png; path = ../../../../../Desktop/triangle.png; sourceTree = "<group>"; };
+		9C902B5A173FD96600BB5271 /* hexagon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hexagon.png; path = ../../../../../Desktop/hexagon.png; sourceTree = "<group>"; };
+		9C902B5C173FDC5A00BB5271 /* rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rectangle.png; path = ../../../../../Desktop/rectangle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +209,14 @@
 		9C902B30173C62D800BB5271 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9C902B5C173FDC5A00BB5271 /* rectangle.png */,
+				9C902B5A173FD96600BB5271 /* hexagon.png */,
+				9C902B58173FD94C00BB5271 /* triangle.png */,
+				9C902B56173FD94400BB5271 /* square.png */,
+				9C902B54173FD93400BB5271 /* diamond.png */,
+				9C902B52173FD92C00BB5271 /* heart.png */,
+				9C902B50173FD92400BB5271 /* star.png */,
+				9C902B4E173FD17900BB5271 /* circle.png */,
 				9C902B4C173D4FE300BB5271 /* red-button.png */,
 				9C902B45173D33C300BB5271 /* green-button.png */,
 				9C902B3F173D307E00BB5271 /* wood.jpg */,
@@ -281,6 +305,14 @@
 				9C902B46173D33C300BB5271 /* green-button.png in Resources */,
 				9C902B4B173D490C00BB5271 /* GameStatsViewController.xib in Resources */,
 				9C902B4D173D4FE300BB5271 /* red-button.png in Resources */,
+				9C902B4F173FD17900BB5271 /* circle.png in Resources */,
+				9C902B51173FD92400BB5271 /* star.png in Resources */,
+				9C902B53173FD92C00BB5271 /* heart.png in Resources */,
+				9C902B55173FD93400BB5271 /* diamond.png in Resources */,
+				9C902B57173FD94400BB5271 /* square.png in Resources */,
+				9C902B59173FD94C00BB5271 /* triangle.png in Resources */,
+				9C902B5B173FD96600BB5271 /* hexagon.png in Resources */,
+				9C902B5D173FDC5B00BB5271 /* rectangle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

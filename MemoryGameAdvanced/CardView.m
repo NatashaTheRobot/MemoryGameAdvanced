@@ -10,9 +10,8 @@
 
 @interface CardView ()
 
-@property (strong, nonatomic) UILabel *label;
-
-- (void)makeLabelView:(CGRect)frame;
+@property (nonatomic) BOOL cardIsOpen;
+@property (strong, nonatomic) UIImageView *imageView;
 
 @end
 
@@ -23,40 +22,35 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor purpleColor];
-        [self makeLabelView:frame];
     }
     return self;
 }
 
-- (void)makeLabelView:(CGRect)frame
+- (void)makeImageView:(NSString *)imageName
 {
-    CGRect labelFrame = CGRectMake(0, 40, frame.size.width, 20);
-    UILabel *label = [[UILabel alloc] initWithFrame:labelFrame];
-    label.textAlignment = NSTextAlignmentCenter;
-    self.label =  label;
-}
-
-- (void)setLabelText:(NSString *)text
-{
-    self.label.text = text;
+    UIImage *image = [UIImage imageNamed:imageName];
+    self.imageView = [[UIImageView alloc] initWithImage:image];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self.delegate didChooseCard:self];
+    if (!self.cardIsOpen) {
+        [self.delegate didChooseCard:self];
+    }
 }
 
 - (void)showCard
 {
     self.backgroundColor = [UIColor whiteColor];
-    self.label.text = [NSString stringWithFormat:@"%i", self.tag];
-    [self addSubview:self.label];
+    [self addSubview:self.imageView];
+    self.cardIsOpen = YES;
 }
 
 - (void)hideCard
 {
     self.backgroundColor = [UIColor purpleColor];
-    [self.label removeFromSuperview];
+    [self.imageView removeFromSuperview];
+    self.cardIsOpen = NO;
 }
 
 - (void)eliminateCard

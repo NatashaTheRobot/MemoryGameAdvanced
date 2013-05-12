@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) id<MatchDelegate> delegate;
 
-- (void)setLabelText:(NSString *)text;
+- (void)makeImageView:(NSString *)imageName;
 
 - (void)showCard;
 - (void)hideCard;

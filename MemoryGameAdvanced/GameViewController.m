@@ -15,7 +15,8 @@
 
 @property NSMutableArray *openCards;
 @property NSMutableArray *cardDeck;
-@property NSMutableArray *cardLabels;
+@property NSMutableArray *cardTags;
+@property NSArray *imageNames;
 
 @property NSInteger numberOfCardViewsDisplayed;
 @property (nonatomic) int numberOfCardsTouched;
@@ -29,9 +30,9 @@
 - (IBAction)resetGameWithButton:(id)sender;
 
 - (void)generateCardViewsWithNumberOfColumns:(NSUInteger)columns numberOfRows:(NSUInteger)rows;
-- (void)generateCardLabels:(NSUInteger)numberOfLabels;
+- (void)generateCardTags:(NSUInteger)numberOfTags;
 - (void)displayCardDeck;
-- (void)shuffleCardLabels;
+- (void)shuffleCardTags;
 
 - (void)runTimer:(NSTimer *)timer;
 - (void)startTimer;
@@ -51,27 +52,29 @@
     self.numberOfMissedMatches = 0;
     self.openCards = [NSMutableArray array];
     self.cardDeck = [NSMutableArray array];
+    self.imageNames = @[@"hexagon.png", @"triangle.png", @"square.png", @"diamond.png",
+                        @"heart.png", @"star.png", @"circle.png", @"rectangle.png"];
     
     [self generateCardViewsWithNumberOfColumns:4 numberOfRows:4];
     [self displayCardDeck];
 
 }
 
-- (void)generateCardLabels:(NSUInteger)numberOfLabels
+- (void)generateCardTags:(NSUInteger)numberOfTags
 {
-    self.cardLabels = [NSMutableArray array];
+    self.cardTags = [NSMutableArray array];
     
-    for (uint i = 0; i < (numberOfLabels / 2); i++) {
-        [self.cardLabels addObject:[NSNumber numberWithInt:i]];
+    for (uint i = 0; i < (numberOfTags / 2); i++) {
+        [self.cardTags addObject:[NSNumber numberWithInt:i]];
     }
     
-    [self.cardLabels addObjectsFromArray:self.cardLabels];
+    [self.cardTags addObjectsFromArray:self.cardTags];
 }
 
 - (void)generateCardViewsWithNumberOfColumns:(NSUInteger)columns numberOfRows:(NSUInteger)rows
 {
-    [self generateCardLabels:(columns * rows)];
-    [self shuffleCardLabels];
+    [self generateCardTags:(columns * rows)];
+    [self shuffleCardTags];
 
     float x = 10.0;
     float y = 55.0;
@@ -83,8 +86,9 @@
             
             CardView *cardView = [[CardView alloc] initWithFrame:frame];
             cardView.delegate = self;
-            cardView.tag = [(NSNumber *)(self.cardLabels[(self.cardLabels.count - 1)]) intValue];
-            [self.cardLabels removeLastObject];
+            cardView.tag = [(NSNumber *)(self.cardTags[(self.cardTags.count - 1)]) intValue];
+            [cardView makeImageView:self.imageNames[cardView.tag]];
+            [self.cardTags removeLastObject];
             [self.cardDeck addObject:cardView];
             
             x += 75.0;
@@ -96,11 +100,11 @@
     
 }
 
-- (void)shuffleCardLabels
+- (void)shuffleCardTags
 {
-    for (uint i = 0; i < self.cardLabels.count; i++) {
-        int newIndex = arc4random() % (self.cardLabels.count - 1);
-        [self.cardLabels exchangeObjectAtIndex:i withObjectAtIndex:newIndex];
+    for (uint i = 0; i < self.cardTags.count; i++) {
+        int newIndex = arc4random() % (self.cardTags.count - 1);
+        [self.cardTags exchangeObjectAtIndex:i withObjectAtIndex:newIndex];
     }
     
 }
