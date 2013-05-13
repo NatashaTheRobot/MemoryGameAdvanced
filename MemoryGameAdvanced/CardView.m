@@ -10,7 +10,6 @@
 
 @interface CardView ()
 
-@property (nonatomic) BOOL cardIsOpen;
 @property (nonatomic) CGRect cardFrame;
 @property (strong, nonatomic) UIImageView *imageView;
 
@@ -37,23 +36,21 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (!self.cardIsOpen) {
-        [self.delegate didChooseCard:self];
-    }
+    [self.delegate didChooseCard:self];
 }
 
 - (void)showCard
 {
     self.backgroundColor = [UIColor whiteColor];
     [self addSubview:self.imageView];
-    self.cardIsOpen = YES;
+    self.userInteractionEnabled = NO;
 }
 
 - (void)hideCard
 {
     self.backgroundColor = [UIColor purpleColor];
     [self.imageView removeFromSuperview];
-    self.cardIsOpen = NO;
+    self.userInteractionEnabled = YES;
 }
 
 - (void)eliminateCard
