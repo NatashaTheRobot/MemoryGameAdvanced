@@ -32,7 +32,7 @@
 {
     UIImage *image = [UIImage imageNamed:imageName];
     self.imageView = [[UIImageView alloc] initWithImage:image];
-    self.imageView.center = CGPointMake(33, 50);
+    self.imageView.center = CGPointMake((self.cardFrame.size.width / 2), (self.cardFrame.size.height / 2));
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
